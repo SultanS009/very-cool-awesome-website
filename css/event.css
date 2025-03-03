@@ -1,22 +1,25 @@
 *{
-    Box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 Body{
-    Display: flex;
-    Height: 100vh;
-    Justify-content: center;
-    Align-items: center;
-    Margin: 0;
-    Background-color: forestgreen
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: forestgreen
 }
 
 .box{
-    Background-color: darkblue;
-    Color: white;
-    Width: 300px;
-    Height: 50px;
+    background-color: darkblue;
+    color: white;
+    width: 300px;
+    height: 50px;
     padding: 10px;
     margin: 10px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
