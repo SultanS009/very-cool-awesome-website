@@ -1,1 +1,22 @@
-code
+*{
+    Box-sizing: border-box;
+}
+
+Body{
+    Display: flex;
+    Height: 100vh;
+    Justify-content: center;
+    Align-items: center;
+    Margin: 0;
+    Background-color: forestgreen
+}
+
+.box{
+    Background-color: darkblue;
+    Color: white;
+    Width: 300px;
+    Height: 50px;
+    padding: 10px;
+    margin: 10px;
+    
+}
