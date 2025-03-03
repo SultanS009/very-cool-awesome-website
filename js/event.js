@@ -5,6 +5,11 @@ const element4 = document.getElementById('element4')
 const element5 = document.getElementById('element5')
 
 
-element1.addEventListner('click', ()=>{
-    element1.innerHTML = "hey"
+element1.addEventListener('click', ()=>{
+    element1.innerHTML = "I've been clicked! <br> Try double clicking me."
+})
+
+
+element1.addEventListener('dblclick', ()=>{
+    element.innerHTML = "I've been double clicked! <br> Try single clicking me."
 })
