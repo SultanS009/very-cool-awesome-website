@@ -22,11 +22,17 @@ Body{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #element1{
     position: absolute;
     top: 0px;
     left: 0px;
-    
+}
+
+#element2{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
