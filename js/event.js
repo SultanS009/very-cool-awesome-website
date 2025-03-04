@@ -58,7 +58,7 @@ element4.addEventListener('click', ()=>{
     element4.style.opacity = .3
 })
 
-document.addEventListener('j', (event)=>{
+document.addEventListener('keyup', (event)=>{
     console.log(event.key)
     if (event.key == 'j')
     {
