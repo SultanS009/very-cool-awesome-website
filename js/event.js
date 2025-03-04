@@ -34,5 +34,18 @@ document.addEventListener('keyup', (event)=>{
     {
         positionY = positionY + 10
     }
-    element3.style.top = postionY
+    else if (event.key == 'ArrowUp')
+    {
+        positionY = positionY - 10
+    }
+    else if (event.key == 'ArrowLeft')
+    {
+        positionX = posisitonX - 10
+    }
+    else if (event.key == 'ArrowRight')
+    {
+        positionX = positionX + 10
+    }
+    element3.style.top = `${positionY}px`
+    element3.style.left = `${positionX}px`
 })
