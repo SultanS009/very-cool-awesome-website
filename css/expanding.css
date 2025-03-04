@@ -4,7 +4,9 @@
 
 body {
     display: flex;
-    height: 100vh justify-content: center;
+    background-color: #0A1045;
+    height: 100vh ;
+    justify-content: center;
     align-item: center;
     margin: 0;
 }
@@ -35,6 +37,8 @@ body {
     Bottom: 20px;
     Left: 20px;
     Margin: 0;
+    Opacity: 0;
+    Transition: opacity .4s ease-in .6s;
 }
 
 
@@ -42,22 +46,10 @@ body {
     Flex: 10;
 }
 
-.panel.active.h3 {
-
+.panel.active h3 {
+    Opacity: 1;
 }
 
 
 
 
-
-Const panels=document.querySelectorAll(‘.panel’) panels.forEach(panel=> {
-        panel.addEventListner(‘click’, ()=> {
-                removeActiveClasses() panel.classlist.add(‘active’)
-            })
-
-    }) Function removeActiveClasses() {
-    panels.forEach(panel=> {
-            panel.classlist.remove(‘active’)
-        }) //console.log(“hello”)
-    //console.log(“show me panels”)
-}
