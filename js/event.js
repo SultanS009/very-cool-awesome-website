@@ -48,4 +48,6 @@ document.addEventListener('keyup', (event)=>{
     }
     element3.style.top = `${positionY}px`
     element3.style.left = `${positionX}px`
+    element3.style.right = `${positionY}px`
+
 })
