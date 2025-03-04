@@ -35,8 +35,6 @@ body {
     Bottom: 20px;
     Left: 20px;
     Margin: 0;
-    Opacity: 0;
-    Transition: opacity .4s ease-in .6s;
 }
 
 
@@ -45,7 +43,7 @@ body {
 }
 
 .panel.active.h3 {
-    Opacity: 1;
+
 }
 
 
