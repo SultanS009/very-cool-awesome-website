@@ -24,6 +24,7 @@ element2.addEventListener('mouseout',()=>{
     element2.style.backgroundColor = "darkblue"
 })
 
-element3.addEventListener('arrowkeys',()=>{
-
+document.addEventListener('keyup', (event)=>{
+    style.backgroundColor = "#412722"
+    console.log(event.key)
 })
