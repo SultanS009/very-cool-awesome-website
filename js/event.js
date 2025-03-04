@@ -73,6 +73,7 @@ const list = ['running', 'paused']
 let index = 0
 element5.addEventListener('click', ()=>{
     element5.style.animationPlayState = list[index]
+    index = (index + 1) % 2
 })
 
 
