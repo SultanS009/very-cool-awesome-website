@@ -40,7 +40,7 @@ document.addEventListener('keyup', (event)=>{
     }
     else if (event.key == 'ArrowLeft')
     {
-        positionX = posisitonX + 10
+        positionX = positionX + 10
     }
     else if (event.key == 'ArrowRight')
     {
@@ -50,3 +50,23 @@ document.addEventListener('keyup', (event)=>{
     element3.style.right = `${positionX}px`
 
 })
+
+element4.addEventListener('click', ()=>{
+    element4.style.width = "10px"
+    element4.style.height = "10px"
+    element4.innerHTML = ""
+    element4.style.opacity = .3
+})
+
+document.addEventListener('j', (event)=>{
+    console.log(event.key)
+    if (event.key == 'j')
+    {
+        element4.style.width = "300px"
+        element4.style.height = "50px"
+        element4.innerHTML = "Click me to make me small <br> Press the letter 'j' to bring mr back"
+        element4.style.opacity = 0
+    }
+})
+
+
