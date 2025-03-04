@@ -14,7 +14,16 @@ element1.addEventListener('dblclick', ()=>{
     element1.innerHTML = "I've been double clicked! <br> Try single clicking me."
 })
 
-element2.addEventListener('mouseover'), ()=>{
+element2.addEventListener('mouseover', ()=>{
     element2.style.color = "yellow"
-    element2.style.backgroundColor = "pink"
-}
+    element2.style.backgroundColor = "hotpink"
+})
+
+element2.addEventListener('mouseout',()=>{
+    element2.style.color = "white"
+    element2.style.backgroundColor = "blue"
+})
+
+element3.addEventListener('arrowkeys',()=>{
+
+})

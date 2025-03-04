@@ -1,12 +1,10 @@
-
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
     display: flex;
-    height: 100vh
-    justify-content: center;
+    height: 100vh justify-content: center;
     align-item: center;
     margin: 0;
 }
@@ -24,51 +22,44 @@ body {
     margin: 10px;
     border-radius: 25px;
     flex: 1;
-Color: white;
-Cursor: pointer;
-Position: relative;
-Transition:all 1s ease-in;
+    Color: white;
+    Cursor: pointer;
+    Position: relative;
+    Transition: all 1s ease-in;
 
 }
 
-.panel h3{
-Font-size: 24px;
-Position: absolute;
-Bottom: 20px;
-Left: 20px;
-Margin: 0;
-Opacity: 0;
-Transition: opacity .4s ease-in .6s;
+.panel h3 {
+    Font-size: 24px;
+    Position: absolute;
+    Bottom: 20px;
+    Left: 20px;
+    Margin: 0;
+    Opacity: 0;
+    Transition: opacity .4s ease-in .6s;
 }
 
 
 .panel.active {
-Flex: 10;
+    Flex: 10;
 }
 
-.panel.active.h3{
-Opacity: 1;
+.panel.active.h3 {
+    Opacity: 1;
 }
 
 
 
 
 
-Const panels = document.querySelectorAll(‘.panel’)
+Const panels=document.querySelectorAll(‘.panel’) panels.forEach(panel=> {
+        panel.addEventListner(‘click’, ()=> {
+                removeActiveClasses() panel.classlist.add(‘active’)
+            })
 
-panels.forEach( panel => {
-	panel.addEventListner(‘click’, ()=>{
-	removeActiveClasses()
-	panel.classlist.add(‘active’)
-	})
-})
-
-
-Function removeActiveClasses(){
-	panels.forEach(panel => {
-panel.classlist.remove(‘active’)
-})
-
-//console.log(“hello”)
-//console.log(“show me panels”)
+    }) Function removeActiveClasses() {
+    panels.forEach(panel=> {
+            panel.classlist.remove(‘active’)
+        }) //console.log(“hello”)
+    //console.log(“show me panels”)
 }
