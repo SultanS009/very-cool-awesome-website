@@ -47,7 +47,6 @@ document.addEventListener('keyup', (event)=>{
         positionX = positionX + 10
     }
     element3.style.top = `${positionY}px`
-    element3.style.left = `${positionX}px`
-    element3.style.right = `${positionY}px`
+    element3.style.right = `${positionX}px`
 
 })
