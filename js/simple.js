@@ -9,6 +9,7 @@ document.addEventListener('keyup', (event)=>{
     if (event.key == 'ArrowDown')
     {
         positionY = positionY + 50
+        element3.innerHTML = "<h3> When you hit the finsish line click the space bar</h3>"
     }
     else if (event.key == 'ArrowUp')
     {
