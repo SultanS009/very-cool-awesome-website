@@ -11,6 +11,21 @@ Body{
     background-image: linear-gradient(blue, green);
 }
 
+.finishline{
+    color: white;
+    width: 300px;
+    height: 725px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: absolute;
+    left: 0;
+}
+
+
 .box{
     background-image: linear-gradient(black, red);
     color: white;
@@ -27,6 +42,8 @@ Body{
 
 #element3{
     position: absolute;
+    top: 0;
+    right: 0;
     animation: spin .3s linear infinite;
     animation-play-state: paused;
 }
@@ -40,15 +57,3 @@ Body{
     }
 }
 
-.finishline{
-    color: white;
-    width: 300px;
-    height: 1000px;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    background-color: black;
-}

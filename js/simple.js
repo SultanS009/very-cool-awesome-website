@@ -8,19 +8,19 @@ document.addEventListener('keyup', (event)=>{
 
     if (event.key == 'ArrowDown')
     {
-        positionY = positionY + 10
+        positionY = positionY + 50
     }
     else if (event.key == 'ArrowUp')
     {
-        positionY = positionY - 10
+        positionY = positionY - 50
     }
     else if (event.key == 'ArrowLeft')
     {
-        positionX = positionX + 10
+        positionX = positionX + 50
     }
     else if (event.key == 'ArrowRight')
     {
-        positionX = positionX - 10
+        positionX = positionX - 50
     }
     element3.style.top = `${positionY}px`
     element3.style.right = `${positionX}px`
