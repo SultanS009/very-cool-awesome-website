@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background: navajowhite;
+    background-image: linear-gradient(red, blue);
     display: flex; /* Uses Flexbox which responds to different screen sizes */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horazontally center */
