@@ -25,11 +25,10 @@ Body{
     cursor: pointer;
 }
 
-
-#element4{
+#element3{
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    animation: spin .3s linear infinite;
+    animation-play-state: paused;
 }
 
 @keyframes spin {
@@ -39,9 +38,4 @@ Body{
     to {
         transform: rotate(360deg)
     }
-}
-
-#element5 {
-    animation: spin .3s linear infinite;
-    animation-play-state: paused;
 }
