@@ -25,6 +25,17 @@ body{
     cursor: pointer;
 }
 
-#element1{
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+#element2 {
+    animation: spin .3s linear infinite;
+    animation-play-state: paused;
 }
