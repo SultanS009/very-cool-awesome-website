@@ -1,5 +1,4 @@
 const element1 = document.getElementById('element1')
-const element2 = document.getElementById('element2')
 const body = document.querySelector('body')
 
 
@@ -27,7 +26,7 @@ document.addEventListener('keyup', (event)=>{
 
 const list = ['running', 'paused']
 let index = 0
-element2.addEventListener('click', ()=>{
-    element2.style.animationPlayState = list[index]
+element1.addEventListener('click', ()=>{
+    element1.style.animationPlayState = list[index]
     index = (index + 1) % 2
 })

@@ -35,7 +35,8 @@ body{
     }
 }
 
-#element2 {
+#element1 {
     animation: spin .3s linear infinite;
     animation-play-state: paused;
 }
+
