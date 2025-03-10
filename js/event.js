@@ -15,13 +15,13 @@ element1.addEventListener('dblclick', ()=>{
 })
 
 element2.addEventListener('mouseover', ()=>{
-    element2.style.color = "yellow"
-    element2.style.backgroundImage = "hotpink"
+    element2.style.color = "red"
+    element2.style.backgroundImage = "linear-gradient(yellow, hotpink)"
 })
 
 element2.addEventListener('mouseout',()=>{
     element2.style.color = "white"
-    element2.style.backgroundColor = "darkblue"
+    element2.style.backgroundImage = "linear-gradient(blue, green)"
 })
 
 let positionY = 0;
