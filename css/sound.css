@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Rock+Salt&display=swap');
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.btn{
+    background-color: green;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Rock Salt', 'sans-serif'
+}
+
+h1{
+    display: flex;
+    position: absolute;
+    top: 125px;
+    color: green;
+
+}
+
+.btn:hover{
+    background-color: red;
+    color: yellow;2
+}
+
+.btn:focus{
+    outline: none;
+}
