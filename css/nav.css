@@ -31,6 +31,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav ul{
