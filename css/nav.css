@@ -121,6 +121,6 @@ body{
 
 .nav a.current,
 .nav a:hover {
-    color: hotpink;
+    color: red;
     font-weight: bold;
 }
