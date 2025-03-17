@@ -1,9 +1,15 @@
 
 body {
-    background-color: navajowhite;
+    background-color: white;
     display: flex; /* Uses Flexbox which responds to different screen sizes */
     align-items: center; /* Vertically center */
     justify-content: center; /* Horazontally center */
     height: 100vh; /* Setting bodu height to 100% */
     margin: 0;
+}
+
+.text{
+    color: black;
+    display: flex;
+    justify-content: center;
 }
