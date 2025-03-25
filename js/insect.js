@@ -62,7 +62,7 @@ function createInsect(){
 }
 
 function catchInsect(){
-    let insect = 
+    let insect = event.target
     increaseScore()
     classList.add('caught')
     setTimeout( () => this.remove(), 2000)
