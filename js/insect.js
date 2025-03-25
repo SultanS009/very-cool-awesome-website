@@ -62,7 +62,7 @@ function createInsect(){
 }
 
 function catchInsect(){
-    let insect = even.target
+    let insect = 
     increaseScore()
     classList.add('caught')
     setTimeout( () => this.remove(), 2000)
