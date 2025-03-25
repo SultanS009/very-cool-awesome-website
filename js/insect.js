@@ -51,23 +51,27 @@ function increaseTime() {
 function createInsect(){
     const insect = document.createElement('div')
     insect.classList.add('insect')
-    insect.innerHTML = `<img src="${selected_insect.src}" alt = "${selected_insect.alt}"  >`
+    insect.innerHTML = <img src="${selected_insect.src}" alt="${selected_insect.alt}">
     const {x, y} = getRandomLocation()
     insect.style.top = `${y}px`
     insect.style.left = `${x}px`
-    catchInsect()
-    increaseScore()
+    insect.addEventListener('click', catchInsect)
     game_container.appendChild(insect)
 
 }
 
-function catchInsect(){
-    let insect = event.target
-    increaseScore()
-    insect.classList.add('caught')
-    setTimeout( () => insect.remove(), 2000)
-    addInsects()
+
+function catchInsect(event){
+let insect = event.target.closest('.insect')
+if (!insect) return
+increaseScore()
+insect.classList.add('caught')
+
+setTimeout(() => insect.remove(), 2000)
+addInsects()
+
 }
+
 
 function addInsects(){
     setTimeout(createInsect, 1000)
