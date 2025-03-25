@@ -75,7 +75,7 @@ function addInsects(){
 }
 
 function increaseScore(){
-    score++
+    score = score + 1
     if (score == 15 )
     {
         message.classList.add('visible')
