@@ -55,7 +55,7 @@ function createInsect(){
     const {x, y} = getRandomLocation()
     insect.style.top = `${y}px`
     insect.style.left = `${x}px`
-    // catchInsect()
+    catchInsect()
     increaseScore()
     game_container.appendChild(insect)
 
