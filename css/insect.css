@@ -138,7 +138,6 @@ h1{
     object-fit: contain;
     position: absolute;
     background-color: transparent;
-    border: 2px solid yellow;
     color: yellow;
     font-family: inherit;
 }

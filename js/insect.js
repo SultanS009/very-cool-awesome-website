@@ -22,6 +22,7 @@ choose_insect_btns.forEach(btn => {
         const alt = img.getAttribute('alt')
         screens[1].classList.add('up')
         selected_insect = {src, alt}
+        setTimeout(createInsect, 1000)
         startGame()
         createInsect()
     })
@@ -51,21 +52,19 @@ function increaseTime() {
 function createInsect(){
     const insect = document.createElement('div')
     insect.classList.add('insect')
-    insect.innerHTML = `<img src="${selected_insect.src}" alt = "${selected_insect.alt}"  >`
     const {x, y} = getRandomLocation()
     insect.style.top = `${y}px`
     insect.style.left = `${x}px`
-    catchInsect()
-    increaseScore()
+    insect.innerHTML = `<img src="${selected_insect.src}" alt = "${selected_insect.alt}"/>`
+    insect.addEventListener('click', catchInsect)
     game_container.appendChild(insect)
-
 }
 
-function catchInsect(){
+function catchInsect(event){
     let insect = event.target
     increaseScore()
     insect.classList.add('caught')
-    setTimeout( () => this.remove(), 2000)
+    setTimeout( () => insect.remove(), 2000)
     addInsects()
 }
 
@@ -76,7 +75,7 @@ function addInsects(){
 
 function increaseScore(){
     score = score + 1
-    if (score == 15 )
+    if (score > 15 )
     {
         message.classList.add('visible')
     }
