@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Rock+Salt&family=Zen+Dots&display=swap');
+
+
 *{
     box-sizing: border-box;
     font-family:
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&family=Rock+Salt&family=Zen+Dots&display=swap');
 
 h1{
     justify-content: center;
