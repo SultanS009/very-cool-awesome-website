@@ -1,11 +1,7 @@
-h1{
-    justify-content: center;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    font-family: Nintend Bold;
+*{
+    box-sizing: border-box;
 }
+
 
 @font-face {
     font-family: 'Nintend Bold';
@@ -13,3 +9,14 @@ h1{
     font-weight: normal;
     src: local('Nintend Bold'), url('NintendBoldRM8E.woff') format('woff');
     }
+
+h1{
+    justify-content: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-family: 'Nintend Bold';
+}
+
+
