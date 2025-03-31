@@ -91,12 +91,14 @@ h1{
 
 
 .game-container{
-    position: relative;
+    position: absolute;
+    z-index: -1;
+
 }
 
 .time, .score{
     position: absolute;
-    top: 20px;
+    top: 40px;
 }
 
 .time{
@@ -150,3 +152,4 @@ h1{
 .insect.caught{
     transform: scale(0);
 }
+
