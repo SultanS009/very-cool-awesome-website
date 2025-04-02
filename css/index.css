@@ -103,6 +103,15 @@ a{
     left: 20px;
 }
 
+.t9{
+    background-color: white;
+    position: absolute;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333333;
+    top: 650px;
+    left: 20px;
+}
+
 .p1{
     background-color: white;
     position: absolute;
@@ -176,6 +185,16 @@ a{
     font-family: 'Segoe UI', sans-serif;
     color: #333333;
     top: 620px;
+    left: 20px;
+
+}
+
+.p9{
+    background-color: white;
+    position: absolute;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333333;
+    top: 690px;
     left: 20px;
 
 }
