@@ -29,9 +29,6 @@ function moveBallUp(){
     }
 }
 
-
-
-
 createBall()
 function createBall(){
     document.body.appendChild(ball)
