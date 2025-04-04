@@ -4,7 +4,7 @@ const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballXDirection = 1
-let ballYPosition = windowWidth / 2 - ballRadius
+let ballYPosition = windowHeight / 2 - ballRadius
 let ballYDirection = 1
 let ballSpeed = 5
 
