@@ -9,6 +9,7 @@ let ballYDirection = 1
 let ballSpeed = 5
 
 setInterval(moveBall, 10)
+setInterval(moveBallUp, 10)
 
 function moveBall(){
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
@@ -17,6 +18,9 @@ function moveBall(){
     {
         ballXDirection = ballXDirection * -1
     }
+}
+
+function moveBallUp(){
     ballYPosition = ballYPosition + ballSpeed * ballYDirection
     ball.style.top = `${ballYPosition}px`
     if (ballYPosition < 0 || ballYPosition  > windowHeight - 2 * ballRadius)
