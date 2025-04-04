@@ -1,5 +1,5 @@
 const ball = document.createElement('div')
-const ballRadius = 30
+const ballRadius = 90
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
@@ -11,6 +11,6 @@ function createBall(){
     ball.style.borderRadius = "50%"
     ball.style.backgroundColor = "red"
     ball.style.position = "absolute"
-    ball.style.top = "30px"
-    ball.style.left = "30px"
+    ball.style.top = `${windowHeight / 2}px`
+    ball.style.left = `${windowWidth / 2}px`
 }
