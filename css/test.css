@@ -16,8 +16,10 @@
 .sun{
     height: 300px;
     width: 300px;
-    background-color: orange;
+    background-color: ;
     top: 0;
     bottom: 0;
     align-items: center;
+    border-radius: 50%;
+    position: absolute;
 }
