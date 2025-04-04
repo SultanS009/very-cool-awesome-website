@@ -3,8 +3,10 @@ const ballRadius = 50
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 let ballXPosition = windowWidth / 2 - ballRadius
-let ballSpeed = 5
 let ballXDirection = 1
+let ballYPosition = windowWidth / 2 - ballRadius
+let ballYDirection = 1
+let ballSpeed = 5
 
 setInterval(moveBall, 10)
 
@@ -15,7 +17,12 @@ function moveBall(){
     {
         ballXDirection = ballXDirection * -1
     }
-
+    ballYPosition = ballYPosition + ballSpeed * ballYDirection
+    ball.style.top = `${ballYPosition}px`
+    if (ballYPosition < 0 || ballYPosition  > windowHeight - 2 * ballRadius)
+    {
+        ballYDirection = ballYDirection * -1
+    }
 }
 
 
