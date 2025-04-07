@@ -7,8 +7,8 @@
     position: absolute;
 }
 
-.sky{
-    color: linear-graadient(blue,pink)
+body{
+    background-color: blue;
 }
 
 .ocean{
@@ -16,10 +16,13 @@
 }
 
 .sun{
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 900px;
     background-color: yellow;
     align-items: center;
     border-radius: 50%;
     position: relative;
+    margin: auto;
+    padding: 10px;
+    top: 420px;
 }
