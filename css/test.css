@@ -41,7 +41,7 @@ body{
     bottom: 0;
     width: 200px;
     height: 40px;
-    background-color: brown;
+    background-color: #3b271d;
     border-radius: 0 0 20px 20px;
 }
 
@@ -51,22 +51,10 @@ body{
     left: 50%;
     width: 6px;
     height: 70px;
-    background-color: black;
+    background-color: #a05e2b;
 }
 
-.sail-left {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 0 solid transparent;
-    border-bottom: 50px solid white;
-
-}
-
-.sail-right {
+.sail {
     position: absolute;
     bottom: 40px;
     left: 50%;
