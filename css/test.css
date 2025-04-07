@@ -9,6 +9,7 @@
 
 body{
     background-image: linear-gradient(rgba(0, 215, 255, 1), rgba(255, 140, 80, 1));
+    overflow: hidden;
 }
 
 .ocean{
