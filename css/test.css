@@ -28,4 +28,92 @@ body{
     top: 420px;
 }
 
+.boat {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 150px;
+}
+
+.hull {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 40px;
+    background-color: brown;
+    border-radius: 0 0 20px 20px;
+}
+
+.mast {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 70px;
+    background-color: brown;
+}
+
+.sail-left {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 50px solid white;
+    transform: translateX(-6px);
+}
+
+.sail-right {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 0 solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid white;
+    transform: translateX(6px);
+}
+
+.cabin {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    width: 50px;
+    height: 30px;
+    background-color: #8B4513;
+    border-radius: 5px;
+}
+
+.window1, .window2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: lightblue;
+    border-radius: 50%;
+    bottom: 50px;
+}
+
+.window1 {
+    left: 25px;
+}
+
+.window2 {
+    left: 40px;
+}
+
+.flag {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 10px;
+    background-color: red;
+}
 
