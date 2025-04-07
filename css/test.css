@@ -1,8 +1,10 @@
 .sand{
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
     bottom: 0;
-    height: 400px;
-    width: 900px;
-    color: yellow;
+    align-items: center;
+    position: absolute;
 }
 
 .sky{
