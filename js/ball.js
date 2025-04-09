@@ -1,14 +1,18 @@
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
+
+
+const LPaddel = document.createElement('div')
+document.body.appendChild(LPaddel)
+let LPaddelWidth = 10
+let LPaddelHeight = 100
+let LPaddelSpeed = 5
+let LPaddelYPosition = windowHeight / 2 - ballRadius
+let LPaddelXPosition = 70
+
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-const LPadel = document.createElement('div')
-document.body.appendChild(LPadel)
-let LPadelWidth = 20
-let LPadelHeight = 100
-let LPadelSpeed = 1
-let LPadelYPosition = windowHeight / 2 - ballRadius
-const ballRadius = 50
+const ballRadius = 20
 let ballXPosition = windowWidth / 2 - ballRadius
 let ballXDirection = 1
 let ballYPosition = windowHeight / 2 - ballRadius
@@ -37,9 +41,9 @@ function moveBall(){
     let ballTop = ballYPosition
     let ballBottom = ballYPosition + 2 * ballRadius
     let ballLeft = ballXPosition
-    let LPadelTop = LPadelYPosition
-    let LPadelBottom = LPadelYPosition + LPadelHeight
-    let LPadelRight = LPadelXPosition + LPadelWidth
+    let LPaddelTop = LPaddelYPosition
+    let LPaddelBottom = LPaddelYPosition + LPaddelHeight
+    let LPaddelRight = LPaddelXPosition + LPaddelWidth
 }
 
 function moveBallUp(){
@@ -65,38 +69,38 @@ function createBall(){
     ball.style.left = `${windowWidth / 2 - ballRadius}px`
 }
 
-createLPadel()
-function createLPadel(){
-    LPadel.style.height = `${LPadelHeight}px`
-    LPadel.style.width = `${LPadelWidth}px`
-    LPadel.style.backgroundColor = 'blue'
-    LPadel.style.position = 'absolute'
-    LPadel.style.left = "50px"
-    LPadel.style.top = `${LPadelYPosition}px`
+createLPaddel()
+function createLPaddel(){
+    LPaddel.style.height = `${LPaddelHeight}px`
+    LPaddel.style.width = `${LPaddelWidth}px`
+    LPaddel.style.backgroundColor = 'blue'
+    LPaddel.style.position = 'absolute'
+    LPaddel.style.left = "50px"
+    LPaddel.style.top = `${LPaddelYPosition}px`
 }
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w')
     {
-        if (LPadelYPosition <= 0) {
-            LPadelYPosition = 0
+        if (LPaddelYPosition <= 0) {
+            LPaddelYPosition = 0
         }
         else {
-            LPadelYPosition = LPadelYPosition - LPadelSpeed
+            LPaddelYPosition = LPaddelYPosition - LPaddelSpeed
         }
     }
     if (event.key == 's')
     {
-        if (LPadelYPosition >= windowHeight - LPadelHeight) {
-            LPadelYPosition = windowHeight - LPadelHeight
+        if (LPaddelYPosition >= windowHeight - LPaddelHeight) {
+            LPaddelYPosition = windowHeight - LPaddelHeight
         }
         else {
-            LPadelYPosition = LPadelYPosition + LPadelSpeed
+            LPaddelYPosition = LPaddelYPosition + LPaddelSpeed
         }
     }
-    LPadel.style.top = `${LPadelYPosition}px`
+    LPaddel.style.top = `${LPaddelYPosition}px`
 })
-function movePadel(){
+function movePaddel(){
 
 
 }
