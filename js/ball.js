@@ -81,32 +81,47 @@ function createLPaddel(){
     LPaddel.style.width = `${LPaddelWidth}px`
     LPaddel.style.backgroundColor = 'blue'
     LPaddel.style.position = 'absolute'
-    LPaddel.style.left = "50px"
+    LPaddel.style.left = `${LPaddelXPosition}px`
     LPaddel.style.top = `${LPaddelYPosition}px`
 }
+
+wKey = false
+sKey = false
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'w')
+    {
+        wKey = true
+    }
+    if (event.key == 's')
+    {
+        sKey = true
+    }
+})
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w')
     {
-        if (LPaddelYPosition <= 0) {
-            LPaddelYPosition = 0
-        }
-        else {
-            LPaddelYPosition = LPaddelYPosition - LPaddelSpeed
-        }
+        wKey = false
     }
     if (event.key == 's')
     {
-        if (LPaddelYPosition >= windowHeight - LPaddelHeight) {
-            LPaddelYPosition = windowHeight - LPaddelHeight
-        }
-        else {
-            LPaddelYPosition = LPaddelYPosition + LPaddelSpeed
-        }
+        sKey = false
+    }
+})
+
+function moveLPaddel() {
+    if (wKey == true && LPaddelYPosition > 0) {
+        LPaddelYPosition = LPaddelYPosition - LPaddelSpeed
+    }
+    if (sKey == true && LPaddelYPosition < windowHeight - LPaddelHeight) {
+        LPaddelYPosition = LPaddelYPosition + LPaddelSpeed
     }
     LPaddel.style.top = `${LPaddelYPosition}px`
-})
-function movePaddel(){
-
-
 }
+
+function animate() {
+    moveBall()
+    moveLPaddel()
+    requestAnimationFrame(animate)
+}
+animate()
