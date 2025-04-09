@@ -89,6 +89,7 @@ function createScoreElement() {
     scoreElement.style.top = '10px';
     scoreElement.style.left = '10px';
     scoreElement.style.fontSize = '20px';
+    scoreElement.style.font = "Sans"
     scoreElement.style.color = 'black';
     scoreElement.textContent = `Score: ${score}`;
 }
