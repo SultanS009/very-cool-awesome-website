@@ -25,7 +25,7 @@ body{
     position: relative;
     margin: auto;
     padding: 10px;
-    top: 420px;
+    top: 120px;
 }
 
 .boat {
@@ -33,7 +33,7 @@ body{
     bottom: 150px;
     left: 50%;
     width: 200px;
-    height: 150px;
+    height: 250px;
 }
 
 .hull {
@@ -42,14 +42,13 @@ body{
     width: 200px;
     height: 40px;
     background-color: #3b271d;
-    border-radius: 0 0 20px 20px;
 }
 
 .mast {
     position: absolute;
     bottom: 40px;
     left: 50%;
-    width: 6px;
+    width: 10px;
     height: 70px;
     background-color: #a05e2b;
 }
@@ -59,10 +58,9 @@ body{
     bottom: 40px;
     left: 50%;
     width: 0;
-    height: 0;
-    border-left: 0 solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 50px solid white;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid white;
 
 }
 

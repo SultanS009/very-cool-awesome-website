@@ -112,6 +112,15 @@ a{
     left: 20px;
 }
 
+.t10{
+    background-color: white;
+    position: absolute;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333333;
+    top: 720px;
+    left: 20px;
+}
+
 .p1{
     background-color: white;
     position: absolute;
@@ -197,6 +206,15 @@ a{
     top: 690px;
     left: 20px;
 
+}
+
+.p10{
+    background-color: white;
+    position: absolute;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333333;
+    top: 760px;
+    left: 20px;
 }
 
 button{
