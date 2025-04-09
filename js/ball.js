@@ -51,7 +51,14 @@ function moveBall(){
     let LPaddelBottom = LPaddelYPosition + LPaddelHeight
     let LPaddelRight = LPaddelXPosition + LPaddelWidth
 
-    if (ball)
+    if (
+        (ballBottom >= LPaddelTop) &&
+        (ballTop <= LPaddelBottom) &&
+        (ballLeft <= LPaddelRight) &&
+        (ballXDirection == -1)
+    ) {
+        ballXDirection = ballXDirection * -1
+    }
 }
 
 
