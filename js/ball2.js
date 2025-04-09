@@ -9,7 +9,7 @@ let LPaddelWidth = 10;
 let LPaddelHeight = 100;
 let LPaddelSpeed = 5;
 let LPaddelYPosition = windowHeight / 2 - LPaddelHeight / 2;
-let LPaddelXPosition = 70;
+let LPaddelXPosition = 30;
 
 const ball = document.createElement('div');
 document.body.appendChild(ball);
