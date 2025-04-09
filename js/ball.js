@@ -50,18 +50,11 @@ function moveBall(){
     let LPaddelTop = LPaddelYPosition
     let LPaddelBottom = LPaddelYPosition + LPaddelHeight
     let LPaddelRight = LPaddelXPosition + LPaddelWidth
+
+    if (ball)
 }
 
-function moveBallUp(){
-    ballYPosition = ballYPosition + ballSpeed * ballYDirection
-    ball.style.top = `${ballYPosition}px`
-    if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius)
-    {
-        ballYDirection = ballYDirection * -1
-    }
-}
 
-if (ball)
 
 createBall()
 function createBall(){
