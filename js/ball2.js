@@ -27,6 +27,19 @@ const levelElement = document.createElement('div');
 document.body.appendChild(levelElement);
 let level = 0;
 
+const gameOverElement = document.createElement('div');
+document.body.appendChild(gameOverElement);
+gameOverElement.style.position = 'absolute';
+gameOverElement.style.top = '50%';
+gameOverElement.style.left = '50%';
+gameOverElement.style.transform = 'translate(-50%, -50%)';
+gameOverElement.style.fontSize = '40px';
+gameOverElement.style.color = 'red';
+gameOverElement.style.display = 'none';
+gameOverElement.innerHTML = 'Game Over';
+
+let animationFrame;
+
 function moveBall() {
     ballXPosition = ballXPosition + (ballSpeed * ballXDirection);
     ballYPosition = ballYPosition + (ballSpeed * ballYDirection);
@@ -38,7 +51,14 @@ function moveBall() {
         ballYDirection = ballYDirection * -1;
     }
 
-    if (ballXPosition < 0 || ballXPosition > windowWidth - 2 * ballRadius) {
+    // Game Over if ball goes off the left
+    if (ballXPosition < 0) {
+        cancelAnimationFrame(animationFrame);
+        gameOverElement.style.display = 'block';
+        return;
+    }
+
+    if (ballXPosition > windowWidth - 2 * ballRadius) {
         ballXDirection = ballXDirection * -1;
     }
 
@@ -53,7 +73,7 @@ function moveBall() {
         ballBottom >= LPaddelTop &&
         ballTop <= LPaddelBottom &&
         ballLeft <= LPaddelRight &&
-        ballXDirection === -1
+        ballXDirection == -1
     ) {
         ballXDirection = ballXDirection * -1;
     }
@@ -70,7 +90,7 @@ function moveBall() {
         level = level + 1;
         LPaddelHeight = LPaddelHeight - 10;
         score = 0;
-        ballSpeed = ballSpeed + 3;
+        ballSpeed = ballSpeed + 1;
     }
 
     scoreElement.innerHTML = "Score: " + score;
@@ -90,49 +110,49 @@ function createBall() {
 function createLPaddel() {
     LPaddel.style.height = LPaddelHeight + "px";
     LPaddel.style.width = LPaddelWidth + "px";
-    LPaddel.style.backgroundColor = "blue";
-    LPaddel.style.position = "absolute";
+    LPaddel.style.backgroundColor = 'blue';
+    LPaddel.style.position = 'absolute';
     LPaddel.style.left = LPaddelXPosition + "px";
     LPaddel.style.top = LPaddelYPosition + "px";
 }
 
 function createScoreElement() {
-    scoreElement.style.position = "absolute";
-    scoreElement.style.top = "10px";
-    scoreElement.style.left = "10px";
-    scoreElement.style.fontSize = "20px";
+    scoreElement.style.position = 'absolute';
+    scoreElement.style.top = '10px';
+    scoreElement.style.left = '10px';
+    scoreElement.style.fontSize = '20px';
     scoreElement.style.font = "Sans";
-    scoreElement.style.color = "black";
+    scoreElement.style.color = 'black';
     scoreElement.innerHTML = "Score: " + score;
 }
 
 function createLevelElement() {
-    levelElement.style.position = "absolute";
-    levelElement.style.top = "40px";
-    levelElement.style.left = "10px";
-    levelElement.style.fontSize = "20px";
+    levelElement.style.position = 'absolute';
+    levelElement.style.top = '40px';
+    levelElement.style.left = '10px';
+    levelElement.style.fontSize = '20px';
     levelElement.style.font = "Sans";
-    levelElement.style.color = "black";
+    levelElement.style.color = 'black';
     levelElement.innerHTML = "Level: " + level;
 }
 
 let wKey = false;
 let sKey = false;
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "w") {
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'w') {
         wKey = true;
     }
-    if (event.key === "s") {
+    if (event.key === 's') {
         sKey = true;
     }
 });
 
-document.addEventListener("keyup", function(event) {
-    if (event.key === "w") {
+document.addEventListener('keyup', function(event) {
+    if (event.key === 'w') {
         wKey = false;
     }
-    if (event.key === "s") {
+    if (event.key === 's') {
         sKey = false;
     }
 });
@@ -156,7 +176,7 @@ function animate() {
     moveBall();
     moveLPaddel();
     updateScoreDisplay();
-    requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
 }
 
 createBall();
