@@ -22,6 +22,7 @@ let ballSpeed = 5;
 const scoreElement = document.createElement('div');
 document.body.appendChild(scoreElement);
 let score = 0;
+let level = 1;
 
 function moveBall() {
     ballXPosition += ballSpeed * ballXDirection;
@@ -89,9 +90,9 @@ function createScoreElement() {
     scoreElement.style.top = '10px';
     scoreElement.style.left = '10px';
     scoreElement.style.fontSize = '20px';
-    scoreElement.style.font = "Sans"
+    scoreElement.style.font = "Sans";
     scoreElement.style.color = 'black';
-    scoreElement.textContent = `Score: ${score}`;
+    scoreElement.textContent = `Score: ${score} | Level: ${level}`;
 }
 
 let wKey = false;
@@ -116,8 +117,7 @@ document.addEventListener('keyup', (event) => {
 });
 
 function updateScoreDisplay() {
-    scoreElement.style.color = "black";
-    scoreElement.style.fontSize = "20px";
+    scoreElement.textContent = `Score: ${score} | Level: ${level}`;
 }
 
 function moveLPaddel() {
