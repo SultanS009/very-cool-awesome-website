@@ -85,7 +85,6 @@ function moveBall() {
     ) {
         score = score + 1;
     }
-
     if (score >= 5) {
         level = level + 1;
         LPaddelHeight = LPaddelHeight - 10;
@@ -121,7 +120,7 @@ function createScoreElement() {
     scoreElement.style.top = '10px';
     scoreElement.style.left = '10px';
     scoreElement.style.fontSize = '20px';
-    scoreElement.style.font = "Sans";
+    scoreElement.style.fontFamily = "Sans-serif";
     scoreElement.style.color = 'black';
     scoreElement.innerHTML = "Score: " + score;
 }
@@ -131,7 +130,7 @@ function createLevelElement() {
     levelElement.style.top = '10px';
     levelElement.style.right = '10px';
     levelElement.style.fontSize = '20px';
-    levelElement.style.font = "Sans";
+    levelElement.style.fontFamily = "Sans-serif";
     levelElement.style.color = 'black';
     levelElement.innerHTML = "Level: " + level;
 }
