@@ -7,7 +7,7 @@ const LPaddel = document.createElement('div');
 document.body.appendChild(LPaddel);
 let LPaddelWidth = 10;
 let LPaddelHeight = 100;
-let LPaddelSpeed = 100;
+let LPaddelSpeed = 10;
 let LPaddelYPosition = windowHeight / 2 - LPaddelHeight / 2;
 let LPaddelXPosition = 30;
 
@@ -128,8 +128,8 @@ function createScoreElement() {
 
 function createLevelElement() {
     levelElement.style.position = 'absolute';
-    levelElement.style.top = '40px';
-    levelElement.style.left = '10px';
+    levelElement.style.top = '10px';
+    levelElement.style.right = '10px';
     levelElement.style.fontSize = '20px';
     levelElement.style.font = "Sans";
     levelElement.style.color = 'black';
