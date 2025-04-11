@@ -51,7 +51,7 @@ function moveBall() {
         ballYDirection = ballYDirection * -1;
     }
 
-    // Game Over if ball goes off the left
+
     if (ballXPosition < 0) {
         cancelAnimationFrame(animationFrame);
         gameOverElement.style.display = 'block';
