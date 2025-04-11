@@ -22,21 +22,24 @@ let ballSpeed = 5;
 const scoreElement = document.createElement('div');
 document.body.appendChild(scoreElement);
 let score = 0;
-let level = 1;
+
+const levelElement = document.createElement('div');
+document.body.appendChild(levelElement);
+let level = 0;
 
 function moveBall() {
-    ballXPosition += ballSpeed * ballXDirection;
-    ballYPosition += ballSpeed * ballYDirection;
+    ballXPosition = ballXPosition + (ballSpeed * ballXDirection);
+    ballYPosition = ballYPosition + (ballSpeed * ballYDirection);
 
-    ball.style.left = `${ballXPosition}px`;
-    ball.style.top = `${ballYPosition}px`;
+    ball.style.left = ballXPosition + "px";
+    ball.style.top = ballYPosition + "px";
 
     if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
-        ballYDirection *= -1;
+        ballYDirection = ballYDirection * -1;
     }
 
     if (ballXPosition < 0 || ballXPosition > windowWidth - 2 * ballRadius) {
-        ballXDirection *= -1;
+        ballXDirection = ballXDirection * -1;
     }
 
     let ballTop = ballYPosition;
@@ -52,7 +55,7 @@ function moveBall() {
         ballLeft <= LPaddelRight &&
         ballXDirection === -1
     ) {
-        ballXDirection *= -1;
+        ballXDirection = ballXDirection * -1;
     }
 
     if (
@@ -60,29 +63,38 @@ function moveBall() {
         ballTop <= LPaddelBottom &&
         ballLeft <= LPaddelRight
     ) {
-        score += 1;
+        score = score + 1;
     }
 
-    scoreElement.textContent = `Score: ${score}`;
+    // Check if score is greater than or equal to 5, increase level and shrink paddle
+    if (score >= 5) {
+        level += 1;
+        LPaddelHeight = Math.max(50, LPaddelHeight - 10); // Decrease height but not smaller than 50px
+        score = 0; // Reset score after level up
+    }
+
+    // Update the score and level on the screen
+    scoreElement.innerHTML = "Score: " + score;
+    levelElement.innerHTML = "Level: " + level;
 }
 
 function createBall() {
-    ball.style.height = `${2 * ballRadius}px`;
-    ball.style.width = `${2 * ballRadius}px`;
+    ball.style.height = (2 * ballRadius) + "px";
+    ball.style.width = (2 * ballRadius) + "px";
     ball.style.borderRadius = "50%";
     ball.style.backgroundColor = "red";
     ball.style.position = "absolute";
-    ball.style.top = `${ballYPosition}px`;
-    ball.style.left = `${ballXPosition}px`;
+    ball.style.top = ballYPosition + "px";
+    ball.style.left = ballXPosition + "px";
 }
 
 function createLPaddel() {
-    LPaddel.style.height = `${LPaddelHeight}px`;
-    LPaddel.style.width = `${LPaddelWidth}px`;
+    LPaddel.style.height = LPaddelHeight + "px";
+    LPaddel.style.width = LPaddelWidth + "px";
     LPaddel.style.backgroundColor = 'blue';
     LPaddel.style.position = 'absolute';
-    LPaddel.style.left = `${LPaddelXPosition}px`;
-    LPaddel.style.top = `${LPaddelYPosition}px`;
+    LPaddel.style.left = LPaddelXPosition + "px";
+    LPaddel.style.top = LPaddelYPosition + "px";
 }
 
 function createScoreElement() {
@@ -92,13 +104,23 @@ function createScoreElement() {
     scoreElement.style.fontSize = '20px';
     scoreElement.style.font = "Sans";
     scoreElement.style.color = 'black';
-    scoreElement.textContent = `Score: ${score} | Level: ${level}`;
+    scoreElement.innerHTML = "Score: " + score;
+}
+
+function createLevelElement() {
+    levelElement.style.position = 'absolute';
+    levelElement.style.top = '40px';
+    levelElement.style.left = '10px';
+    levelElement.style.fontSize = '20px';
+    levelElement.style.font = "Sans";
+    levelElement.style.color = 'black';
+    levelElement.innerHTML = "Level: " + level;
 }
 
 let wKey = false;
 let sKey = false;
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', function(event) {
     if (event.key === 'w') {
         wKey = true;
     }
@@ -107,7 +129,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-document.addEventListener('keyup', (event) => {
+document.addEventListener('keyup', function(event) {
     if (event.key === 'w') {
         wKey = false;
     }
@@ -117,17 +139,18 @@ document.addEventListener('keyup', (event) => {
 });
 
 function updateScoreDisplay() {
-    scoreElement.textContent = `Score: ${score} | Level: ${level}`;
+    scoreElement.style.color = "black";
+    scoreElement.style.fontSize = "20px";
 }
 
 function moveLPaddel() {
     if (wKey && LPaddelYPosition > 0) {
-        LPaddelYPosition -= LPaddelSpeed;
+        LPaddelYPosition = LPaddelYPosition - LPaddelSpeed;
     }
     if (sKey && LPaddelYPosition < windowHeight - LPaddelHeight) {
-        LPaddelYPosition += LPaddelSpeed;
+        LPaddelYPosition = LPaddelYPosition + LPaddelSpeed;
     }
-    LPaddel.style.top = `${LPaddelYPosition}px`;
+    LPaddel.style.top = LPaddelYPosition + "px";
 }
 
 function animate() {
@@ -140,4 +163,5 @@ function animate() {
 createBall();
 createLPaddel();
 createScoreElement();
+createLevelElement();
 animate();
