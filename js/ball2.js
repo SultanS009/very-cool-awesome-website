@@ -66,14 +66,13 @@ function moveBall() {
         score = score + 1;
     }
 
-    // Check if score is greater than or equal to 5, increase level and shrink paddle
     if (score >= 5) {
-        level += 1;
-        LPaddelHeight = Math.max(50, LPaddelHeight - 10); // Decrease height but not smaller than 50px
-        score = 0; // Reset score after level up
+        level = level + 1;
+        LPaddelHeight = LPaddelHeight - 10;
+        score = 0;
+        ballSpeed = ballSpeed + 3;
     }
 
-    // Update the score and level on the screen
     scoreElement.innerHTML = "Score: " + score;
     levelElement.innerHTML = "Level: " + level;
 }
@@ -91,49 +90,49 @@ function createBall() {
 function createLPaddel() {
     LPaddel.style.height = LPaddelHeight + "px";
     LPaddel.style.width = LPaddelWidth + "px";
-    LPaddel.style.backgroundColor = 'blue';
-    LPaddel.style.position = 'absolute';
+    LPaddel.style.backgroundColor = "blue";
+    LPaddel.style.position = "absolute";
     LPaddel.style.left = LPaddelXPosition + "px";
     LPaddel.style.top = LPaddelYPosition + "px";
 }
 
 function createScoreElement() {
-    scoreElement.style.position = 'absolute';
-    scoreElement.style.top = '10px';
-    scoreElement.style.left = '10px';
-    scoreElement.style.fontSize = '20px';
+    scoreElement.style.position = "absolute";
+    scoreElement.style.top = "10px";
+    scoreElement.style.left = "10px";
+    scoreElement.style.fontSize = "20px";
     scoreElement.style.font = "Sans";
-    scoreElement.style.color = 'black';
+    scoreElement.style.color = "black";
     scoreElement.innerHTML = "Score: " + score;
 }
 
 function createLevelElement() {
-    levelElement.style.position = 'absolute';
-    levelElement.style.top = '40px';
-    levelElement.style.left = '10px';
-    levelElement.style.fontSize = '20px';
+    levelElement.style.position = "absolute";
+    levelElement.style.top = "40px";
+    levelElement.style.left = "10px";
+    levelElement.style.fontSize = "20px";
     levelElement.style.font = "Sans";
-    levelElement.style.color = 'black';
+    levelElement.style.color = "black";
     levelElement.innerHTML = "Level: " + level;
 }
 
 let wKey = false;
 let sKey = false;
 
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'w') {
+document.addEventListener("keydown", function(event) {
+    if (event.key === "w") {
         wKey = true;
     }
-    if (event.key === 's') {
+    if (event.key === "s") {
         sKey = true;
     }
 });
 
-document.addEventListener('keyup', function(event) {
-    if (event.key === 'w') {
+document.addEventListener("keyup", function(event) {
+    if (event.key === "w") {
         wKey = false;
     }
-    if (event.key === 's') {
+    if (event.key === "s") {
         sKey = false;
     }
 });
