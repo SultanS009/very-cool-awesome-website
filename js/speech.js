@@ -42,5 +42,10 @@ const textarea = document.getElementById('')
 data.forEach(createBox)
 
 function createBox(item) {
-    console.log(item)
+    const box = document.createElement('div')
+    box.classList.add('box')
+    box.innerHTML = `
+        <img src="${item.image}" alt="${item.tex}"/>
+        <p class="info"> ${item.text} </p>
+    `
 }
