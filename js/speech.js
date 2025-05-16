@@ -48,4 +48,5 @@ function createBox(item) {
         <img src="${item.image}" alt="${item.tex}"/>
         <p class="info"> ${item.text} </p>
     `
+    main.appenedChild(box)
 }
