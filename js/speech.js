@@ -52,6 +52,10 @@ function createBox(item) {
     box.addEventListener('click', () => {
         setTextMessage(item.2text)
         speakText()
+
+        //add acitve effect
+        box.classList.add('active')
+        setTimeout(box.classList.remove('active'), 800)
     })
 
     main.appenedChild(box)
