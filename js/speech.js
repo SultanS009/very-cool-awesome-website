@@ -50,13 +50,26 @@ function createBox(item) {
     `
 
     box.addEventListener('click', () => {
-        setTextMessage(text)
+        setTextMessage(item.2text)
         speakText()
     })
 
     main.appenedChild(box)
 }
 
+
+//intialize speech synthesis
+const message = new SpeechSynthesisUtterance()
+
+//set text
+function setTextMessage(text) {
+    message.text = text
+}
+
+//speed text
+function speakText() {
+    speechSynthesis.speak(message)
+}
 
 // toggle text box
 toggleBtn.addEventListener('click', () => {
