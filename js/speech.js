@@ -103,6 +103,8 @@ speechSynthesis.addEventListener('voiceschanged', getVoices)
 voicesSelect.addEventListener('change', setVoice)
 
 //set voice
-function setVoice(e)
+function setVoice(e) {
+    message.voice = voices.find(voice => voice.name)
+}
 
 getVoices()
