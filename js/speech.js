@@ -57,7 +57,7 @@ const data = [
     {
         image: '../grandma.jpg',
         text: "I Want To Go To My Grandmas"
-    },
+    }
 ]
 
 
