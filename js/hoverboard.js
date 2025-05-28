@@ -7,5 +7,10 @@ for(let i = 0; i < SQUARES; i++)
 {
     const square = document.createElement('div')
     square.classList.add('square')
+    square.addEventListener('mouseover', () => setColor(square))
     container.appendChild(square)
+}
+
+function setColor(element){
+    
 }
