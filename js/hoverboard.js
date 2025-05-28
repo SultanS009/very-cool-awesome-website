@@ -14,7 +14,7 @@ for(let i = 0; i < SQUARES; i++)
 
 function removeColor(element){
     element.style.background = '#1d1d1d'
-    elemnt.style.boxShadow = '0 0 2px black'
+    element.style.boxShadow = '0 0 2px Black'
 }
 
 function setColor(element){
