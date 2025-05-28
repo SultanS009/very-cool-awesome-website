@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
-.container{
-    
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 400px;
 }
