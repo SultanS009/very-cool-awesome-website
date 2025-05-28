@@ -1,6 +1,6 @@
 // Java Script Time
 const container = document.getElementById('container')
-const colors = ["red", "purple", "green", "blue", "yellow", "hotpink", "orange"]
+const colors = ["red", "orange", "yellow", "green", "blue", "hotpink", "indigo", "violet"]
 const SQUARES = 500
 
 for(let i = 0; i < SQUARES; i++)
