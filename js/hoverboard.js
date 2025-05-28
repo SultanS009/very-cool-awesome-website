@@ -1,6 +1,25 @@
 // Java Script Time
 const container = document.getElementById('container')
-const colors = ["red", "orange", "yellow", "green", "blue", "hotpink", "indigo", "violet"]
+const colors = [
+  "aliceblue",
+  "azure",
+  "blue",
+  "blueviolet",
+  "cadetblue",
+  "cornflowerblue",
+  "cyan",
+  "darkblue",
+  "deepskyblue",
+  "dodgerblue",
+  "lightblue",
+  "lightskyblue",
+  "lightsteelblue",
+  "mediumblue",
+  "midnightblue",
+  "navy",
+  "powderblue",
+  "royalblue","skyblue","slateblue","steelblue", "teal", "turquoise"
+]
 const SQUARES = 500
 
 for(let i = 0; i < SQUARES; i++)
