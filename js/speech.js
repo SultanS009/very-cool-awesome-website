@@ -1,53 +1,64 @@
-const main = document.querySelector('main');
-const c
+const main = document.querySelector('main')
+const voiceSelect = document.getElementById('voices')
+const textarea = document.getElementById('text')
+const readBtn = document.getElementById('read')
+const toggleBtn = document.getElementById('toggle')
+const closeBtn = document.getElementById('close')
 
-
-
-
-
-
-
-
-
-
-const textarea = document.getElementById('')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const data = [
+    {
+        image: '../drink.jpg',
+        text: "I am Thirsty"
+    },
+    {
+        image: '../food.jpg',
+        text: "I am Hungry"
+    },
+    {
+        image: '../tired.jpg',
+        text: "I am Tired"
+    },
+    {
+        image: '../tired.jpg',
+        text: "I am Tired"
+    },
+    {
+        image: '../hurt.jpg',
+        text: "I am Hurt"
+    },
+    {
+        image: '../happy.jpg',
+        text: "I am Happy"
+    },
+    {
+        image: '../angry.jpg',
+        text: "I am Angry"
+    },
+    {
+        image: '../sad.jpg',
+        text: "I am Sad"
+    },
+    {
+        image: '../scared.jpg',
+        text: "I am Scared"
+    },
+    {
+        image: '../outside.jpg',
+        text: "I Want To Go Outside"
+    },
+    {
+        image: '../home.jpg',
+        text: "I Want To Go Home"
+    },
+    {
+        image: '../school.jpg',
+        text: "I Want To Go To School"
+    },
+    {
+        image: '../grandma.jpg',
+        text: "I Want To Go To My Grandmas"
+    },
+]
 
 
 data.forEach(createBox)
