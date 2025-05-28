@@ -7,55 +7,51 @@ const closeBtn = document.getElementById('close')
 
 const data = [
     {
-        image: '../drink.jpg',
+        image: 'drink.jpg',
         text: "I am Thirsty"
     },
     {
-        image: '../food.jpg',
+        image: 'food.jpg',
         text: "I am Hungry"
     },
     {
-        image: '../tired.jpg',
+        image: 'tired.jpg',
         text: "I am Tired"
     },
     {
-        image: '../tired.jpg',
-        text: "I am Tired"
-    },
-    {
-        image: '../hurt.jpg',
+        image: 'hurt.jpg',
         text: "I am Hurt"
     },
     {
-        image: '../happy.jpg',
+        image: 'happy.jpg',
         text: "I am Happy"
     },
     {
-        image: '../angry.jpg',
+        image: 'angry.jpg',
         text: "I am Angry"
     },
     {
-        image: '../sad.jpg',
+        image: 'sad.jpg',
         text: "I am Sad"
     },
     {
-        image: '../scared.jpg',
+        image: 'scared.jpg',
         text: "I am Scared"
     },
     {
-        image: '../outside.jpg',
+        image: 'outside.jpg',
         text: "I Want To Go Outside"
     },
     {
-        image: '../home.jpg',
+        image: 'home.jpg',
         text: "I Want To Go Home"
     },
     {
-        image: '../school.jpg',
+        image: 'school.jpg',
         text: "I Want To Go To School"
     },
     {
-        image: '../grandma.jpg',
+        image: 'grandma.jpg',
         text: "I Want To Go To My Grandmas"
     }
 ]
