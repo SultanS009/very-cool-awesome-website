@@ -18,5 +18,5 @@ function setColor(element){
 }
 
 function getRandomColor(){
-    return colors[0]
+    return colors[Math.random() * colors.length]
 }
