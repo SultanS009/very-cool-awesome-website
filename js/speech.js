@@ -1,4 +1,15 @@
-const voiceSelect = document.getElementById('voices')
+const main = document.querySelector('main');
+const c
+
+
+
+
+
+
+
+
+
+
 const textarea = document.getElementById('')
 
 
