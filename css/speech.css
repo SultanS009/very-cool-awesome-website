@@ -5,7 +5,7 @@
  }
 
 body {
-    background: navajowhite;
+    background: gray;
     font-family: 'Iceland', sans-serif;
     min-height: 100vh;
     margin: 0;
@@ -13,6 +13,7 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 .container {
@@ -22,7 +23,7 @@ h1 {
 
 .btn {
     cursor: pointer;
-    background-color: lightbrown;
+    background-color: white;
     border: 0;
     border-radius: 4px;
     color: black;
@@ -31,13 +32,13 @@ h1 {
 }
 
 .btn:hover {
-    background: orange;
+    background: red;
     color: white;
 }
 
 .btn:active {
     opacity: .5;
-    transfrom: scale(0.98);
+    transform: scale(0.98);
 }
 
 .btn:focus, select:focus {
@@ -59,7 +60,7 @@ h1 {
     color: white;
     padding: 20px;
     border-radius: 5px;
-    transform: translate(-50%, -800);
+    transform: translate(-50%, -800px);
     transition: all 1s ease-in-out;
 }
 
@@ -77,7 +78,7 @@ h1 {
 }
 
 .text-box textarea {
-    border: 1px hotpink solid;
+    border: 1px red solid;
     border-radius: 4px;
     font-size: 16px;
     padding: 8px;
@@ -114,7 +115,7 @@ main {
 }
 
 .box:active {
-    box-shadow: 0 0 10px 5px hotpink;
+    box-shadow: 0 0 10px 5px red;
 }
 
 .box img {
@@ -124,7 +125,7 @@ main {
 }
 
 .box .info{
-    background-color: darkbrown;
+    background-color: red;
     color: white;
     font-size: 18px;
     letter-spacing: 1px;

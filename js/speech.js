@@ -63,22 +63,21 @@ function createBox(item) {
     const box = document.createElement('div')
     box.classList.add('box')
     box.innerHTML = `
-        <img src="${item.image}" alt="${item.tex}"/>
+        <img src="${item.image}" alt="${item.text}"/>
         <p class="info"> ${item.text} </p>
     `
 
     box.addEventListener('click', () => {
-        setTextMessage(item.2text)
+        setTextMessage(item.text)
         speakText()
 
         //add acitve effect
         box.classList.add('active')
-        setTimeout(box.classList.remove('active'), 800)
+        setTimeout(() => box.classList.remove('active'), 800)
     })
+    main.appendChild(box)
 
-    main.appenedChild(box)
 }
-
 
 //intialize speech synthesis
 const message = new SpeechSynthesisUtterance()
@@ -88,7 +87,7 @@ function setTextMessage(text) {
     message.text = text
 }
 
-//speed text
+//speak text
 function speakText() {
     speechSynthesis.speak(message)
 }
@@ -106,13 +105,13 @@ closeBtn.addEventListener('click', () => {
 let voices = []
 
 function getVoices() {
-    vocies = speechSynthesis.getVoices()
+    voices = speechSynthesis.getVoices()
 
     voices.forEach(voice => {
         const option = document.createElement('option')
         option.value = voice.name
         option.innerText = `${voice.name} ${voice.lang}`
-        voicesSelect.appendChild(option)
+        voiceSelect.appendChild(option)
     })
 }
 
@@ -122,11 +121,11 @@ speechSynthesis.addEventListener('voiceschanged', getVoices)
 
 
 //change voice
-voicesSelect.addEventListener('change', setVoice)
+voiceSelect.addEventListener('change', setVoice)
 
 //set voice
 function setVoice(e) {
-    message.voice = voices.find(voice => voice.name == e.target.value)
+    message.voice = voices.find(voice => voice.name === e.target.value)
 }
 
 getVoices()
